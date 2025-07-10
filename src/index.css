@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-field {
+  @apply w-full p-3 text-lg border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-pink-300 transition duration-200;
+}
+
+/* Optional: add a subtle animated border effect */
+@keyframes animated-border {
+  0% {
+    border-image-source: linear-gradient(90deg, #ec4899, #8b5cf6, #3b82f6);
+  }
+  50% {
+    border-image-source: linear-gradient(90deg, #3b82f6, #ec4899, #8b5cf6);
+  }
+  100% {
+    border-image-source: linear-gradient(90deg, #ec4899, #8b5cf6, #3b82f6);
+  }
+}
+
+.animate-border {
+  animation: animated-border 6s ease infinite;
+  border-width: 4px;
+  border-style: dashed;
+  border-image-slice: 1;
+}
